@@ -7,12 +7,12 @@ email: services@github.com
 # Site Settings
 locale                   : "en-US"
 # Keep original, do not replace
-title                    : "On Demand Training"
+title                    : "GitHub Cheatsheets"
 title_separator          : "-"
 name                     : "GitHub, Inc."
-description              : "You're in control. We're with you along the way."
-baseurl                  : "/on-demand" # the subpath of your site, e.g. "/blog"
-gh_repo                  :
+description              : 
+baseurl                  :  # the subpath of your site, e.g. "/blog"
+gh_repo                  : github/training-kit
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
@@ -34,7 +34,7 @@ comments:
 analytics:
   provider               : google # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          : UA-80557370-2
+    tracking_id          : UA-3769691-2
 
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
@@ -49,12 +49,14 @@ incremental: false
 
 parentsite: https://services.github.com
 permalink: /articles/:title/
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-redirect-from
+  - jekyll-octicons
 
 exclude:
 - bin
@@ -79,7 +81,19 @@ include:
 - _javascript
 sass:
   sass_dir: _stylesheets
+  load_paths:
+    - assets/_scss
+    - node_modules
   style: :compressed
 
 # Custom site configuration
 lang: en
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      lang: "en"
+      redirect_to:
+        - https://lab.github.com

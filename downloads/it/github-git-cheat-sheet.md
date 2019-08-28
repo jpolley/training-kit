@@ -1,5 +1,6 @@
 ---
 layout: cheat-sheet
+redirect_to: false
 title: GitHub Git - riferimento rapido
 byline: Git è un software di controllo di versione distribuito. Installando Git sul tuo PC è possibile facilitare le operazioni su GitHub. Questo documento è un riferimento rapido per i comandi Git più usati.
 leadingpath: ../../../
@@ -151,7 +152,7 @@ temp-*
 Un file di testo chiamato `.gitignore` previene il versioning accidentale di file o directory secondo un pattern specificato.
 
 
-```$ git ls-files --other --ignored --exclude-standard```
+```$ git ls-files --others --ignored --exclude-standard```
 
 Elenca tutti i file ignorati in questo progetto
 
@@ -235,7 +236,7 @@ Unisci il branch remoto con quello locale
 
 ```$ git push [remote] [branch]```
 
-Carica tutti i cambiamenti al branch locale su GitHub
+Carica tutti i cambiamenti dal branch locale su GitHub
 
 
 ```$ git pull```

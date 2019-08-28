@@ -1,5 +1,6 @@
 ---
 layout: cheat-sheet
+redirect_to: false
 title: GitHub Git Cheat Sheet
 byline: Git je open-source distribuovaný systém riadenia revízií. Github je služba, na ktorej je možné tieto revízie (repozitáre, projekty) hostovať. Tento cheat sheet sumarizuje bežne používané Git príkazy pre rýchlu referenciu.
 leadingpath: ../../../
@@ -156,7 +157,7 @@ temp-*
 Textový súbor nazvaný `.gitignore` zakáže verzovanie nechcených súborov alebo priečinkov (väčšinou napr. súbory IDE, heslá).
 
 
-```$ git ls-files --other --ignored --exclude-standard```
+```$ git ls-files --others --ignored --exclude-standard```
 
 Vráti zoznam všetkých ignorovaných súborov v projekte
 

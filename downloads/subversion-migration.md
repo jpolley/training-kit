@@ -1,5 +1,6 @@
 ---
 layout: cheat-sheet
+redirect_to: false
 title: Subversion to Git Migration
 byline: When migrating from Subversion to Git, there’s a vocabulary and command set to learn, in addition to the new capabilities only afforded by Git. This cheat sheet aims to help you in your transition between the classic Subversion technology and the modern use of Git with the GitHub collaboration platform.
 leadingpath: ../../
@@ -36,7 +37,7 @@ Learn more about SVN2Git at the project’s official home page:
 [https://github.com/nirvdrum/svn2git](https://github.com/nirvdrum/svn2git)
 {% endcapture %}
 
-<div class="col-md-6">
+<div class="col-md-6 col-12">
 {{ migration | markdownify }}
 </div>
 
@@ -80,7 +81,7 @@ git svn rebase
 Keep in mind this action rewrites your local Git history and your commit identifiers will be different.
 {% endcapture %}
 
-<div class="col-md-6">
+<div class="col-md-6 col-12">
 {{ bridging | markdownify }}
 </div>
 
@@ -97,7 +98,7 @@ Subversion and Git share similar vocabularies, but the commonality often is only
 | `commit`        | `commit`     | Store prepared changes in local revision history                      |
 | `rm`, `delete`   | `rm`        | Prepare paths for deletion in next commit                             |
 | `move`          | `mv`        | Prepare relocated content for next commit                             |
-| `checkout`      | `clone`     | Acquire the entire history of a project locally for the first tim     |
+| `checkout`      | `clone`     | Acquire the entire history of a project locally for the first time     |
 |                 | `branch`    | Create local context for commits                                      |
 |                 | `merge`     | Join branch histories and changes to working tree                     |
 |                 | `log`       | No network required                                                   |

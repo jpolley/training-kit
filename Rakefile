@@ -32,6 +32,12 @@ task :test do
       :followlocation => true
     }
   }).run
+
+  sh 'bundle exec jekyll build'
+  HTMLProofer.check_directories(
+    ["./_site"], {
+      :empty_alt_ignore => false,
+    }).run
 end
 
 task default: :test
